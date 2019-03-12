@@ -116,9 +116,9 @@ int32_t main(int32_t argc, char **argv) {
                     
                     if(ss.str().size()<=MAX_PACKET_SIZE){
                         if(!lat_queue.empty())
-                            lat_queue.pop_back();
+                            lat_queue.erase(lat_queue.end()-1);
                         if(!lon_queue.empty())
-                            lon_queue.pop_back();
+                            lon_queue.erase(lon_queue.end()-1);
                         
                         ss<<"\n";
                         packet = ss.str();
