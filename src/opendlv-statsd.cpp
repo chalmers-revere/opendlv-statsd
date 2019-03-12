@@ -103,12 +103,12 @@ int32_t main(int32_t argc, char **argv) {
 
                     //store first items in queues 
                     if(!lat_queue.empty()){
-                        lat = lat_queue.front();
+                        lat = lat_queue.back();
                     }
 
 
                     if(!lon_queue.empty()){
-                        lon = lon_queue.front();
+                        lon = lon_queue.back();
                     }
                     
                     //pack the stored items in statsd format
